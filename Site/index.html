@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <title>Academia Fit - Musculação & Alimentação</title>
+  <link rel="stylesheet" href="styles.css" />
+  
+</head>
+<body>
+
+<header>
+  <img src="images/logo.png" alt="Logo Projeto Olimpus" class="logo1" />
+
+  <p>Musculação & Alimentação para sua melhor versão</p>
+</header>
+
+
+<nav>
+  <a href="#produto">Nosso Produto</a>
+  <a href="cadastro.html">Cadastro</a>
+  <a href="#agenda">Agenda & Avaliação</a>
+  <a href="#exercicios">Exercícios</a>
+  <a href="#dicas">Dicas</a>
+  <a href="#curiosidades">Curiosidades</a>
+</nav>
+
+<main>
+
+  <section id="produto">
+    <h2>Nosso Produto</h2>
+    <div class="produto-container">
+      <div class="produto-texto">
+        <p>Oferecemos um sistema completo para você que deseja transformar seu corpo e sua saúde. Nosso programa une musculação personalizada com um plano alimentar elaborado por especialistas. Você terá acompanhamento contínuo, foco no resultado e dicas que facilitam seu dia a dia.</p>
+        <p>Nosso sistema funciona em três pilares principais:</p>
+        <ul>
+          <li><strong>Musculação:</strong> treinos adaptados para seu nível e objetivos.</li>
+          <li><strong>Alimentação:</strong> plano nutricional personalizado, focado em saúde e performance.</li>
+          <li><strong>Avaliação e acompanhamento:</strong> monitoramento constante para ajustar treinos e dieta.</li>
+        </ul>
+      </div>
+      <div class="produto-imagem">
+        <img src="images/imagen-corpo.jpeg" alt="Imagem sobre musculação e alimentação">
+      </div>
+    </div>
+  </section>
+
+  <section id="ficha">
+    <h2>Ficha de Treino</h2>
+    <p>Escolha sua ficha conforme seu nível:</p>
+
+    <div class="ficha-item" onclick="toggleFicha('iniciante')">
+      <h3>Ficha I - Iniciante</h3>
+      <p>Treinos básicos para quem está começando.</p>
+      <div class="ficha-detalhe" id="iniciante">
+        <ul>
+          <li>Duração: 4 semanas</li>
+          <li>Frequência: 3x por semana</li>
+          <li>Exercícios: agachamento livre, supino reto com halteres, remada curvada, abdominal tradicional</li>
+          <li>Objetivo: adaptação neuromuscular e técnica</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ficha-item" onclick="toggleFicha('intermediario')">
+      <h3>Ficha II - Intermediário</h3>
+      <p>Treinos mais intensos para evolução.</p>
+      <div class="ficha-detalhe" id="intermediario">
+        <ul>
+          <li>Duração: 6 a 8 semanas</li>
+          <li>Frequência: 4x por semana</li>
+          <li>Exercícios: agachamento frontal, supino inclinado, puxada na frente, stiff</li>
+          <li>Objetivo: aumento de força e resistência</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ficha-item" onclick="toggleFicha('avancado')">
+      <h3>Ficha III - Avançado</h3>
+      <p>Foco em hipertrofia e variações técnicas.</p>
+      <div class="ficha-detalhe" id="avancado">
+        <ul>
+          <li>Duração: contínua com variações mensais</li>
+          <li>Frequência: 5-6x por semana</li>
+          <li>Exercícios: levantamento terra, agachamento búlgaro, crucifixo inclinado, tríceps testa</li>
+          <li>Objetivo: definição muscular e performance</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="agenda">
+    <h2>Agenda e Avaliação</h2>
+    <p>Use nossa agenda para marcar seus treinos e avaliações regulares com nossos profissionais.</p>
+    <p><em>(Funcionalidade de agenda poderá ser implementada com backend ou apps externos.)</em></p>
+  </section>
+
+  <section id="exercicios">
+    <h2>Links e Vídeos de Exercícios</h2>
+    <p>Veja a execução correta de alguns exercícios importantes para seu treino:</p>
+
+    <div class="video-container">
+      <h3>Agachamento - Técnica correta</h3>
+      <iframe src="https://www.youtube.com/embed/aclHkVaku9U" title="Agachamento" allowfullscreen></iframe>
+    </div>
+
+    <div class="video-container">
+      <h3>Supino reto - Execução</h3>
+      <iframe src="https://www.youtube.com/embed/gRVjAtPip0Y" title="Supino Reto" allowfullscreen></iframe>
+    </div>
+
+    <div class="video-container">
+      <h3>Levantamento Terra - Passo a passo</h3>
+      <iframe src="https://www.youtube.com/embed/op9kVnSso6Q" title="Levantamento Terra" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <section id="dicas">
+  <h2>Dicas sobre Alimentação e Treinos</h2>
+  <div class="card-grid">
+    <div class="card-info">
+      <h3>Hidratação</h3>
+      <p>Beba pelo menos 2 litros de água por dia. A hidratação é essencial para performance e recuperação muscular.</p>
+    </div>
+    <div class="card-info">
+      <h3>Pré-treino</h3>
+      <p>Faça um lanche leve com carboidrato e proteína antes do treino para garantir energia e evitar catabolismo.</p>
+    </div>
+    <div class="card-info">
+      <h3>Consistência</h3>
+      <p>Treinar regularmente é mais importante do que treinar pesado. Crie um hábito e mantenha constância.</p>
+    </div>
+    <div class="card-info">
+      <h3>Descanso</h3>
+      <p>Durma entre 7 a 9 horas por noite. O sono é o momento em que o corpo se recupera e cresce.</p>
+    </div>
+    <div class="card-info">
+      <h3>Alongamento</h3>
+      <p>Faça alongamentos antes e depois do treino para evitar lesões e melhorar a flexibilidade.</p>
+    </div>
+    <div class="card-info">
+      <h3>Alimentação Pós-treino</h3>
+      <p>Consuma proteínas e carboidratos após o treino para ajudar na recuperação e crescimento muscular.</p>
+    </div>
+  </div>
+</section>
+
+
+  <section id="curiosidades">
+    <h2>Curiosidades sobre Exercícios</h2>
+    <ul>
+      <li>O agachamento é um dos exercícios que mais ativam os músculos do corpo inteiro.</li>
+      <li>Treinar com pesos pode aumentar sua densidade óssea e prevenir osteoporose.</li>
+      <li>O descanso entre séries influencia diretamente o ganho de força ou resistência.</li>
+      <li>Exercícios compostos recrutam vários grupos musculares ao mesmo tempo, otimizando o treino.</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2025 Projeto Olimpus - Todos os direitos reservados.</p>
+</footer>
+
+<!-- Botão fixo "Voltar ao topo" -->
+<a href="cadastro.html" id="btnTopo" title="Cadastre-se">Cadastre-se</a>
+
+<script>
+  function toggleFicha(id) {
+    const el = document.getElementById(id);
+    el.classList.toggle('visivel');
+  }
+
+  // Script botão voltar ao topo
+  const btnTopo = document.getElementById('btnTopo');
+  btnTopo.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+</body>
+</html>
