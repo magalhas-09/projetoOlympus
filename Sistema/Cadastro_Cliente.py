@@ -40,7 +40,7 @@ def salvar_dados():
         "codigo": entry_codigo.get(),
         "nome": entry_nome.get(),
         "cpf": entry_cpf.get(),
-        "estado_civil": opcao_estado_civil.get(),
+        "condicionamento_fisico": opcao_condicionamento_fisico.get(),
         "nascimento": entry_data_nasc.get(),
         "sexo": opcao_sexo.get(),
         "celular": entry_celular.get(),
@@ -64,7 +64,7 @@ def salvar_dados():
         sheet = wb.active
         sheet.title = "Clientes"
         sheet.append([
-            "Código", "Nome Completo", "CPF", "Estado Civil", "Data Nascimento",
+            "Código", "Nome Completo", "CPF", "Cond. Fisico", "Data Nascimento",
             "Sexo", "Celular", "Email", "Peso", "Altura", "Objetivo", "Observações"
         ])
     else:
@@ -72,7 +72,7 @@ def salvar_dados():
         sheet = wb["Clientes"] if "Clientes" in wb.sheetnames else wb.active
 
     sheet.append([
-        int(dados["codigo"]), dados["nome"], dados["cpf"], dados["estado_civil"],
+        int(dados["codigo"]), dados["nome"], dados["cpf"], dados["condicionamento_fisico"],
         dados["nascimento"], dados["sexo"], dados["celular"], dados["email"],
         dados["peso"], dados["altura"], dados["objetivo"], dados["observacoes"]
     ])
@@ -85,7 +85,7 @@ def limpar_campos():
     for e in (entry_nome, entry_cpf, entry_data_nasc, entry_celular,
               entry_email, entry_peso, entry_altura, entry_obs):
         e.delete(0, ctk.END)
-    opcao_estado_civil.set("Solteiro(a)")
+    opcao_condicionamento_fisico.set("Solteiro(a)")
     opcao_sexo.set("Masculino")
     opcao_objetivo.set("Emagrecer")
 
@@ -133,10 +133,10 @@ linha(2, "CPF", entry_cpf)
 entry_data_nasc = ctk.CTkEntry(scroll, width=300, placeholder_text="dd/mm/aaaa")
 linha(3, "Data de nascimento", entry_data_nasc)
 
-opcao_estado_civil = ctk.CTkOptionMenu(scroll,
-    values=["Solteiro(a)", "Casado(a)", "Divorciado(a)", "Viúvo(a)"])
-opcao_estado_civil.set("Solteiro(a)")
-linha(4, "Estado civil", opcao_estado_civil)
+opcao_condicionamento_fisico = ctk.CTkOptionMenu(scroll,
+    values=["Iniciante", "Intermediário", "Avançado"])
+opcao_condicionamento_fisico.set("Iniciante")
+linha(4, "Condicionamento fisico", opcao_condicionamento_fisico)
 
 opcao_sexo = ctk.CTkOptionMenu(scroll, values=["Masculino", "Feminino"])
 opcao_sexo.set("Masculino")
